@@ -30,14 +30,14 @@ function addProducts (a) {
 }
 products ();
 
-let myCart = document.getElementById('cart')
-document.getElementByClassName('addBtn').addEventListener('click',function (){
-    myCart.innerHTML = `
-    <div class ="cartProduct">
-    <h3> product 1</h3> <p>50$</p> <p>X</p>
-</div>
-    `
-})
+// let myCart = document.getElementById('cart')
+// document.getElementByClassName('addBtn').addEventListener('click',function (){
+//     myCart.innerHTML = `
+//     <div class ="cartProduct">
+//     <h3> product 1</h3> <p>50$</p> <p>X</p>
+// </div>
+//     `
+// })
 // const btnCart = document.getElementsByClassName('addBtn');
 // btnCart.addEventListner('click',cart)
 
