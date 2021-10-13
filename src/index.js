@@ -10,7 +10,7 @@ addProducts (data);
 function addProducts (a) {
 
     document.getElementById('mainDiv').innerHTML = 
-    a.map( function (e){
+    a.map( e => {
         console.log(e.id);
         return `
         <div class="products">
@@ -34,11 +34,11 @@ for (var i = 0; i < myClass.length; i++) {
     myClass[i].addEventListener('click', cart); 
     }
     function cart (){
-    //  let btnId = button.id;
-    //  console.log(btnId);
+     let btnId = this.id;
+     console.log(btnId);
     let news = document.createElement('div');
     let row = document.createElement('hr');
-    news.innerHTML = `<h3> product </h3> <p>$</p> <p id="delete">X</p>`;
+    news.innerHTML = `<h3> product x${btnId}</h3> <p>$</p> <p id="delete" class="delete">X</p>`;
 
     
     myCart.appendChild(news);
