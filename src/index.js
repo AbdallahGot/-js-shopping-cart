@@ -6,7 +6,7 @@ const data = await response.json();
 console.log(data);
 addProducts (data);
 }
-
+////////////////////////////////////////////////////////////////////////////////////
 function addProducts (a) {
 
     document.getElementById('mainDiv').innerHTML = 
@@ -26,21 +26,24 @@ function addProducts (a) {
         </div>`;
         
     }).join("") 
+    
+    let myCart = document.getElementById('newProduct')
+    let myClass = document.getElementsByClassName('addBtn');
+
+for (var i = 0; i < myClass.length; i++) {
+    myClass[i].addEventListener('click', cart); 
+    }
+    function cart (){
+    //  let btnId = button.id;
+    //  console.log(btnId);
+    let news = document.createElement('div');
+    let row = document.createElement('hr');
+    news.innerHTML = `<h3> product </h3> <p>$</p> <p id="delete">X</p>`;
+
+    
+    myCart.appendChild(news);
+    myCart.appendChild(row);
+}
 
 }
 products ();
-
-// let myCart = document.getElementById('cart')
-// document.getElementByClassName('addBtn').addEventListener('click',function (){
-//     myCart.innerHTML = `
-//     <div class ="cartProduct">
-//     <h3> product 1</h3> <p>50$</p> <p>X</p>
-// </div>
-//     `
-// })
-// const btnCart = document.getElementsByClassName('addBtn');
-// btnCart.addEventListner('click',cart)
-
-// function cart (){
-//     console.log("hello");
-// }
